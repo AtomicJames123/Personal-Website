@@ -11,13 +11,7 @@
 
 	<script>
 
-		function OpenWord() {
-			var mylink = document.GetElementById("MyLink");
-			mylink.setAttribute("href");
-			mylink.click();
-		}
-
-		function DownloadResume() {
+		function PreviewResume() {
 
 		}
 
@@ -54,22 +48,22 @@
 	body  {
 		text-align:center;
 		color: black;
-		background-color #3498DB;
-		background-size: 1000% 1000%;
+		margin: 0;
+		padding: 0;
 	}
 
 	.topnav {
 		width: 100%;
+		position: relative;
 		background-color: black;
 		overflow: hidden;
-		position: relative;
 	}
 
 	.topnav ul {
 		list-style-type: none;
+		text-align: center;
 		margin: 0;
 		padding: 0;
-		text-align: center;
 	}
 
 	.topnav ul:hover {
@@ -132,13 +126,16 @@
 	.welcome {
 		font-size: 25px;
 		position: relative;
-		margin-left: 600px;
-		margin-right: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 400px;
+		height: 300px;
 		margin-top: 150px;
 		margin-bottom: 600px;
 		border: 1px solid black;
 		padding: 30px;
 		background-color: Transparent;
+		min-width: 200px;
 	}
 
 	.welcome:hover {
@@ -332,6 +329,7 @@
 		border-color: black;
 		border-style: solid;
 		background-color: #c2b280;
+		min-width: 580px;
 	}
 
 	#name {
@@ -361,6 +359,7 @@
 
 	#contactformheader {
 		font-size: 30px;
+		min-width: 550px;
 		color: black;
 		text-align: center;
 		background-color: #c2b280;
@@ -372,7 +371,6 @@
 		top: 90px;
 		height: 30px;
 		padding: 15px;
-		min-width: 20%;
 	}
 
 	.submit {
@@ -414,10 +412,7 @@
 
 				</ul>
 
-
 			</div>
-
-
 
 		</div>
 
@@ -427,7 +422,7 @@
 
 			<p id="bounce"> &#8681; </p>
 
-			<button id="ResumeButton" type ="submit" onclick="DownloadResume()">Resume</button>
+			<a href="James Goodman Resume.docx" target="_blank" download><button id="ResumeButton" type ="submit" onclick="PreviewResume">Resume</button></a>
 
 		</div>
 

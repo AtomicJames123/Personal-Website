@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title> James Goodman Site </title>
+
+	<script>
+
+		function OpenWord() {
+			var mylink = document.GetElementById("MyLink");
+			mylink.setAttribute("href");
+			mylink.click();
+		}
+
+		function DownloadResume() {
+
+		}
+
+	</script>
+
+	<script>
+
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";
+	  }
+	  x[slideIndex-1].style.display = "block";
+	}
+
+	</script>
+
+	<style>
+
+	html {
+  	scroll-behavior: smooth;
+ 	}
+
+	body  {
+		text-align:center;
+		color: black;
+		background-color #3498DB;
+		background-size: 1000% 1000%;
+	}
+
+	.topnav {
+		width: 100%;
+		background-color: black;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.topnav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	.topnav ul:hover {
+
+	}
+
+	.topnav li {
+		width: 100px;
+		margin: auto;
+		display: inline;
+	}
+
+	.topnav a {
+		display: inline-block;
+		color: #7FFF00;
+		text-align: center;
+		opacity: 1.0;
+		padding: 14px 20px;
+		text-decoration: none;
+		font-size: 15px;
+	}
+
+	.topnav a:hover {
+		color: white;
+		transform:scale(1.10);
+	}
+
+	.topnav a:active {
+		color: orange !important;
+	}
+
+	.color {
+		-webkit-animation:colorchange 10s infinite alternate;
+	}
+
+	.mySlides {
+		display: none;
+	}
+
+	#ResumeButton {
+		font-size: 15px;
+		text-align: center;
+		color: black;
+		background-color: Transparent;
+		border: 1px solid black;
+		position: relative;
+		width: 100px;
+		height: 50px;
+	}
+
+	#ResumeButton:active {
+		transform: translateY(4px);
+	}
+
+	#ResumeButton:hover {
+		color: pink;
+		background-color: black;
+	}
+
+	.welcome {
+		font-size: 25px;
+		position: relative;
+		margin-left: 600px;
+		margin-right: 600px;
+		margin-top: 150px;
+		margin-bottom: 600px;
+		border: 1px solid black;
+		padding: 30px;
+		background-color: Transparent;
+	}
+
+	.welcome:hover {
+		box-shadow:0px 0px 15px 5px rgba(0,198,255,0.4);
+	}
+
+	#AboutMe {
+		font-size: 25px;
+		margin-bottom: 600px;
+
+	}
+
+	#AboutMePara {
+		font-size: 20px;
+	}
+
+	#Work {
+		font-size:25px;
+		margin-bottom: 600px;
+	}
+
+	#Contact {
+		margin-bottom: 600px;
+		font-size: 20px;
+	}
+
+	.footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: black;
+		opacity: 0.7;
+		color: Transparent;
+		height: 70px;
+	}
+
+	i {
+		font-size: 20px;
+	}
+
+	@-webkit-keyframes colorchange {
+    0% {
+
+        color: red;
+    }
+
+    25% {
+			color: black;
+	  }
+
+	  50% {
+		color: red;
+	  }
+
+	  75% {
+		color: black;
+	  }
+
+	  100% {
+		color: red;
+	   }
+    }
+
+	@-webkit-keyframes Gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	@-moz-keyframes Gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	@keyframes Gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	#bounce {
+		-moz-animation: bounce 2s infinite;
+		-webkit-animation: bounce 2s infinite;
+		animation: bounce 2s infinite;
+	}
+
+	@keyframes bounce {
+		0%, 20%, 50%, 80%, 100% {
+			transform: translateY(0px);
+		}
+
+		40% {
+			transform: translateY(-20px);
+		}
+
+		60% {
+			transform: translateY(-10px);
+		}
+	}
+
+	#tag {
+		color: white;
+		float: right;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 30px;
+	}
+
+	#tag:hover {
+		color: green;
+	}
+
+	#tag2 {
+		color: white;
+		float: right;
+		padding-left: 15px;
+		padding-top: 30px;
+	}
+
+	#tag2:hover {
+		color: blue;
+	}
+
+	#tag3 {
+		color: white;
+		float: right;
+		padding-top: 30px;
+	}
+
+	#tag3:hover {
+		color: #0077B5;
+	}
+
+	input, textarea {
+		padding: 10px;
+		border: 2px solid #E5E5E5;
+		width: 300px;
+		color: #9999999;
+		box-shadow: rgba(0,0,0,0.1) 0px 0px 8px;
+		-noz-box-shadow: rgba(0,0,0,0.1) 0px 0px 8px;
+		-webkit-box-shadow: rgba(0,0,0,0.1) 0px 0px 8px;
+	}
+
+	textarea {
+		width: 400px;
+		height: 150px;
+		max-width: 500px;
+		max-height: 150px;
+		min-width: 400px;
+		min-height: 150px;
+	}
+
+	input:hover, textarea:hover, input:focus, textarea:focus {
+		border-color: 1px solid #C9C9C9;
+		box-shadow: rgba(0,0,0,0.2) 0px 0px 8px;
+		-noz-box-shadow: rgba(0,0,0,0.2) 0px 0px 8px;
+		-webkit-box-shadow: rgba(0,0,0,0.2) 0px 0px 8px;
+	}
+
+	.form label {
+		color: black;
+	}
+
+	.movingform {
+		text-align: center;
+		border: 1px solid black;
+		margin-top: 90px;
+		margin-bottom: 90px;
+		margin-left: 20%;
+		margin-right: 20%;
+		border-color: black;
+		border-style: solid;
+		background-color: #c2b280;
+	}
+
+	#name {
+		font-size: 15px;
+		position: relative;
+		left: 10px;
+	}
+
+	#email {
+		font-size: 15px;
+		position: relative;
+		left: 10px;
+	}
+
+	#subject {
+		font-size: 15px;
+		position: relative;
+		left: 10px;
+	}
+
+	#message {
+		font-size: 15px;
+		position: relative;
+		top: 20px;
+		left: 20px;
+	}
+
+	#contactformheader {
+		font-size: 30px;
+		color: black;
+		text-align: center;
+		background-color: #c2b280;
+		border: 1px solid black;
+		border-bottom: 0;
+		margin-left: 20%;
+		margin-right: 20%;
+		position: relative;
+		top: 90px;
+		height: 30px;
+		padding: 15px;
+		min-width: 20%;
+	}
+
+	.submit {
+		position: relative;
+		top: 9px;
+		font-size: 20px;
+	}
+
+	.submit input {
+		width: 150px;
+		height: 50px;
+		background-color: black;
+		color: white;
+		font-size: 15px;
+	}
+
+	.submit input:hover {
+		background-color: white;
+		color: black;
+	}
+
+
+	</style>
+
+	</head>
+
+	<body>
+		<!--<h1 class = "color"> Home </h1>-->
+
+		<div class="topnav">
+
+			<div class="topnavwrapper">
+
+				<ul>
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="#AboutMe">About Me</a></li>
+					<li><a href="#Work">Portfolio</a></li>
+					<li><a href="#Contact">Contact</a></li>
+
+				</ul>
+
+
+			</div>
+
+
+
+		</div>
+
+		<div class="welcome">
+
+			<h2 id="welcomeheader">Welcome</h2>
+
+			<p id="bounce"> &#8681; </p>
+
+			<button id="ResumeButton" type ="submit" onclick="DownloadResume()">Resume</button>
+
+		</div>
+
+		<div id="AboutMe">
+
+			<h2>About Me</h2>
+
+			<p id="AboutMePara">Hello there! My Name is James Goodman. I am a Junior Software Developer in New York City.<p>
+
+		</div>
+
+
+		<div id="Work">
+
+			<h2>Work Portfolio</h2>
+
+			<!--<img class="mySlides" src="download.jpg">
+			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>-->
+
+		</div>
+
+		<div id="Contact">
+
+			<h2 id="contactformheader"> Contact Me (* is required) </h2>
+
+			<div class="movingform">
+
+			<form class="form" action="mail.php" method="POST">
+
+				<p class="name">
+					<label for="name">Name*</label>
+					<input type="text" id="name" name="name" placeholder="First and Last"/>
+				</p>
+
+
+				<p class="email">
+					<label for="email">Email*</label>
+					<input type ="text" name="email" id="email" placeholder="Please Enter a Valid Email" />
+				</p>
+
+				<p class="subject">
+					<label for="subject">Subject</label>
+					<input type ="text" name="subject" id="subject" placeholder="Subject of Message" />
+				</p>
+
+				<p class="message">
+					<textarea type="text" name="message" id ="message" placeholder="Max 1000 characters" maxlength="1000" /></textarea>
+				</p>
+
+				<p class="submit">
+					<input type="submit" value="Submit">
+				</p>
+
+			</form>
+
+		</div>
+
+		<div class="footer">
+
+			<a href="https://github.com/UltimaJames" target="_blank" id="tag"<i class="fa fa-git-square"</i></a>
+			<a href="#" id="tag2"<i class="fa fa-facebook-official"</i></a>
+			<a href="https://www.linkedin.com/in/james-goodman-7b135612a/" target="_blank" id="tag3"<i class="fa fa-linkedin"</i></a>
+
+		</div>
+		<!--<a id="ResumeLink" style="display:none"</a>
+		<input id="Button" type="button" value="Click Me" onclick="OpenWord()"/>-->
+
+
+	</body>
+
+
+</html>

@@ -11,31 +11,39 @@
 
 	<script>
 
-		function PreviewResume() {
+	function ChangeColorRefresh() {
+		var colors = new Array();
+		colors[0] = "red";
+		colors[1] = "blue";
+		colors[2] = "green";
+		colors[3] = "purple";
 
-		}
+		var Random = Math.floor(Math.random() * colors.length);
+		document.getElementsByClassName("home").color = colors[Random];
+		alert("End");
+	}
 
 	</script>
 
 	<script>
 
-	var slideIndex = 1;
-	showDivs(slideIndex);
+	//var slideIndex = 1;
+	//showDivs(slideIndex);
 
-	function plusDivs(n) {
-	  showDivs(slideIndex += n);
-	}
+	//function plusDivs(n) {
+	  //showDivs(slideIndex += n);
+	//}
 
-	function showDivs(n) {
-	  var i;
-	  var x = document.getElementsByClassName("mySlides");
-	  if (n > x.length) {slideIndex = 1}
-	  if (n < 1) {slideIndex = x.length} ;
-	  for (i = 0; i < x.length; i++) {
-	    x[i].style.display = "none";
-	  }
-	  x[slideIndex-1].style.display = "block";
-	}
+	//function showDivs(n) {
+	  //var i;
+	  //var x = document.getElementsByClassName("mySlides");
+	  //if (n > x.length) {slideIndex = 1}
+	  //if (n < 1) {slideIndex = x.length} ;
+	  //for (i = 0; i < x.length; i++) {
+	    //x[i].style.display = "none";
+	  //}
+	  //x[slideIndex-1].style.display = "block";
+	//}
 
 	</script>
 
@@ -140,6 +148,10 @@
 
 	.welcome:hover {
 		box-shadow:0px 0px 15px 5px rgba(0,198,255,0.4);
+	}
+
+	.home {
+		color: blue;
 	}
 
 	#AboutMe {
@@ -397,7 +409,7 @@
 
 	</head>
 
-	<body>
+	<body onload="">
 		<!--<h1 class = "color"> Home </h1>-->
 
 		<div class="topnav">
@@ -405,11 +417,10 @@
 			<div class="topnavwrapper">
 
 				<ul>
-					<li><a href="index.html" class="active">Home</a></li>
+					<li><a class ="home" href="index.html" class="active">Home</a></li>
 					<li><a href="#AboutMe">About Me</a></li>
 					<li><a href="#Work">Portfolio</a></li>
 					<li><a href="#Contact">Contact</a></li>
-
 				</ul>
 
 			</div>
@@ -422,7 +433,7 @@
 
 			<p id="bounce"> &#8681; </p>
 
-			<a href="James Goodman Resume.docx" target="_blank" download><button id="ResumeButton" type ="submit" onclick="PreviewResume">Resume</button></a>
+			<a href="James Goodman Resume.docx" target="_blank" download><button id="ResumeButton" type ="submit">Resume</button></a>
 
 		</div>
 
@@ -451,26 +462,26 @@
 
 			<div class="movingform">
 
-			<form class="form" action="mail.php" method="POST">
+			<form class="form" action="mailto:Jamesultima@hotmail.com" method="POST">
 
 				<p class="name">
 					<label for="name">Name*</label>
-					<input type="text" id="name" name="name" placeholder="First and Last"/>
+					<input type="text" id="name" name="name" placeholder="First and Last" disabled/>
 				</p>
 
 
 				<p class="email">
 					<label for="email">Email*</label>
-					<input type ="text" name="email" id="email" placeholder="Please Enter a Valid Email" />
+					<input type ="text" name="email" id="email" placeholder="Please Enter a Valid Email" disabled/>
 				</p>
 
 				<p class="subject">
 					<label for="subject">Subject</label>
-					<input type ="text" name="subject" id="subject" placeholder="Subject of Message" />
+					<input type ="text" name="subject" id="subject" placeholder="Subject of Message" disabled/>
 				</p>
 
 				<p class="message">
-					<textarea type="text" name="message" id ="message" placeholder="Max 1000 characters" maxlength="1000" /></textarea>
+					<textarea type="text" name="message" id ="message" placeholder="Max 1000 characters" maxlength="1000" disabled/></textarea>
 				</p>
 
 				<p class="submit">
